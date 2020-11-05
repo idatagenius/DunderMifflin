@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <section class="navbar">
+        <button class="button-nav">Our Team</button>
+        <button class="button-search"> Search (eg. A4, digital)</button>
+        <!-- <input type="search" class="nav-search" placeholder="Search (eg. A4, digital)"> -->
+        <button class="button-nav">Login</button>
+    </section>
+    <!-- Content -->
+    <section class="content">
+        <!-- Types of Paper -->
+        <div class="paper-box">
+            <img src="./img/Printing Paper.jpg" alt="" class="paper-box-img">
+            <h3 class="paper-box-name">Printing Paper</h3>
+        </div>
+        <div class="paper-box">
+            <img src="./img/Converting Paper.jpg" alt="" class="paper-box-img">
+            <h3 class="paper-box-name">Converting Paper</h3>
+        </div>
+        <div class="paper-box">
+            <img src="./img/Digital Paper.jpg" alt="" class="paper-box-img">
+            <h3 class="paper-box-name">Digital Paper</h3>
+        </div>
+        <div class="paper-box">
+            <img src="./img/Office Paper.jpg" alt="" class="paper-box-img">
+            <h3 class="paper-box-name">Office Paper</h3>
+        </div>
+        <div class="paper-box">
+            <img src="./img/Specialty Paper.jpg" alt="" class="paper-box-img">
+            <h3 class="paper-box-name">Specialty Paper</h3>
+        </div>
+        <div class="paper-box">
+            <img src="./img/Recycled Paper.jpg" alt="" class="paper-box-img">
+            <h3 class="paper-box-name">Recycled Paper</h3>
+        </div>
+    </section>
+    <!-- Order Form -->
+    <section class="order-form">
+        <h1 class="form-heading">Order</h1>
+        <hr>
+        <div class="order-box">
+            <form action="#">
+                <input type="text" class="form-button" placeholder="First Name" required>
+                <input type="text" class="form-button" placeholder="Last Name" required>
+                <input type="email" class="form-button" placeholder="Email" required>
+                <input type="text" class="form-button" placeholder="Phone" required>
+                <button type="submit" class="button-submit">Place Order</button>
+            </form>
+            <div class="order-box-product">
+                <img src="./img/Printing Paper.jpg" alt="Office Paper">
+                <div class="dropdown">
+                    <div class="pick-product">
+                    <button>Pick Product</button>
+                        <ul>
+                            <li><a href="#">Printing Paper</a></li>
+                            <li><a href="#">Converting Paper</a></li>
+                            <li><a href="#">Digital Paper</a></li>
+                            <li><a href="#">Office Paper</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
