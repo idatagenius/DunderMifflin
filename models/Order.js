@@ -13,10 +13,13 @@ const OrderSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    date: {
-        type: Date,
-        default: Date.now
+    employee: {
+        type: String,
+        
     },
+    status: {
+        type: String,
+    }
 });
 
 const Order = mongoose.model('Order', OrderSchema);

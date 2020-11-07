@@ -5,5 +5,5 @@ module.exports = {
         }
         req.flash('error_msg', 'Please login to view this page.')
         res.redirect('/users/login')
-    }
+    },
 }

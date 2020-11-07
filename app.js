@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-
 const app = express();
 
 // Pasport config
@@ -17,7 +16,6 @@ const db = require('./config/keys').MongoURI;
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true}) 
     .then( () => console.log("MongoDB Connected..."))
     .catch(err => console.log(err));
-
 // EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs')

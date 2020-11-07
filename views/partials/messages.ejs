@@ -1,7 +1,7 @@
 <% if(typeof errors != 'undefined') { %>
     <% errors.forEach(function(errors) { %>
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <%= errors.msg %>
+            <%= errors %>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -10,11 +10,9 @@
 <% } %>
 
 <% if(success_msg != '') { %>
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <%= success_msg %>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><%= success_msg %></strong>.
   </div>
 <% } %>
 
@@ -28,10 +26,8 @@
 <% } %>
 
 <% if(error != '') { %>
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <%= error %>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div class="alert alert-dismissible alert-warning">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p class="mb-0"><%= error %></p>
   </div>
 <% } %>
