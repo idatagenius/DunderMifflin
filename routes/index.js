@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated } = require('../config/auth');
+const User = require('../models/User')
 
 // Home Page
 router.get('/', (req, res) => res.render('home'));
@@ -33,16 +34,16 @@ router.post('/order', (req, res) => {
     errors.push({ msg: 'Please enter all fields' });
     }
 
-    if (employee !== 'Dwight Schrute' || 'Jim Halpert' || 'Karen Filippell' || 'Phyllis Vance' || 'Stanley Hudson' || 'Andy Bernard') {
-      errors.push({ msg: 'This employee was not found in our database.' });
-    }
+    // if (employee !== 'Dwight Schrute' || 'Jim Halpert' || 'Karen Filippell' || 'Phyllis Vance' || 'Stanley Hudson' || 'Andy Bernard') {
+    //   errors.push({ msg: 'This employee was not found in our database.' });
+    // }
 
     // if (product != 'Printing Paper' || 'Converting Paper' || 'Digital Paper' || ) {
     //   errors.push({ msg: 'Password must be at least 6 characters' });
     // }
 
     if (errors.length > 0) {
-    //   console.log(errors);
+      console.log(errors);
       res.render('order', {
         errors,
         name,
